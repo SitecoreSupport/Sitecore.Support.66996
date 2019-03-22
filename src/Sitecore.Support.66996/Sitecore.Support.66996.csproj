@@ -53,6 +53,7 @@
     <Reference Include="Sitecore.Forms.Core, Version=9.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>Reference\Sitecore.Forms.Core.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Sitecore.Kernel">
       <HintPath>..\packages\SC.Sitecore.Kernel.9.0.1\lib\Sitecore.Kernel.dll</HintPath>
@@ -69,14 +70,17 @@
     <Reference Include="Sitecore.WFFM.Abstractions, Version=9.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>Reference\Sitecore.WFFM.Abstractions.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Sitecore.WFFM.Analytics, Version=9.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>Reference\Sitecore.WFFM.Analytics.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Sitecore.WFFM.Services, Version=9.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>Reference\Sitecore.WFFM.Services.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Sitecore.Xdb.Reporting, Version=11.40.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\SC.Sitecore.Xdb.Reporting.9.0.1\lib\Sitecore.Xdb.Reporting.dll</HintPath>
@@ -104,10 +108,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Config\Include\zzz\Sitecore.Support.66996.config" />
-    <Content Include="Reference\Sitecore.Forms.Core.dll" />
-    <Content Include="Reference\Sitecore.WFFM.Abstractions.dll" />
-    <Content Include="Reference\Sitecore.WFFM.Analytics.dll" />
-    <Content Include="Reference\Sitecore.WFFM.Services.dll" />
     <Content Include="sitecore\shell\client\Applications\WFFM\Controls\ReportDataSource\FormReportDataSource.js" />
   </ItemGroup>
   <ItemGroup>
@@ -115,7 +115,9 @@
     <Content Include="sitecore\shell\client\Applications\WFFM\Controls\ReportDataSource\FormReportDataSource.cshtml" />
     <None Include="web.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Reference\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
